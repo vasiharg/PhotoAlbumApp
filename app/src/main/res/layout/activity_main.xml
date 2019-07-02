@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#000000">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/material_blue_grey_800"
+        android:id="@+id/topBar"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/topBar"
+        android:layout_marginTop="10dp"
+        android:id="@+id/previewImg"
+        android:src="@drawable/fruit1"/>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/previewImg"
+    >
+        <Button
+            android:layout_height="70dp"
+            android:layout_width="0dp"
+            android:text="@string/prevBtn"
+            android:layout_weight="0.9"
+            android:id="@+id/prevBtn"
+            android:background="@drawable/button_states"
+            android:layout_marginRight="5dp"/>
+
+        <ToggleButton
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:text="AutoPlay"
+            android:id="@+id/toggleButton"
+            android:layout_weight="1.2"
+            android:textOff="AUTOPLAY"
+            android:textOn="Stop AUTOPLAY"
+            android:background="@drawable/button_states"
+            android:layout_marginRight="5dp"
+            android:onClick="slideshow"
+            />
+
+        <Button
+            android:layout_height="70dp"
+            android:layout_width="0dp"
+            android:text="@string/nextBtn"
+            android:layout_weight="0.9"
+            android:id="@+id/nextBtn"
+            android:background="@drawable/button_states"/>
+    </LinearLayout>
+
+</RelativeLayout>
